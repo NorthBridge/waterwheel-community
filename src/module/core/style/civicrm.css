@@ -4,6 +4,8 @@ body, #site-slogan, .ui-widget, .comment-form label {
     font-family: "Oxygen", Arial, sans-serif !important;
 }
 
+.float-right { float:right; margin-top: -20px;}
+
 .breadcrumb { display:none; }
 
 .crm-container .help { background-color: #f7f8ef; border: 1px solid #2786c2; }
@@ -59,12 +61,12 @@ table > tbody > tr {
     font-size: 120%;
 }
 
-.console > .view-content > table > tbody > tr > td > :nth-child(1),
+.console > .view-content > table > tbody > tr > td,
 .console > .view-content > .views-row
 {
     font-weight: bold;
     background-color: #edf0de;
     padding: 5px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
