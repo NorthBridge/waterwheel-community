@@ -59,9 +59,9 @@ table > tbody > tr {
     font-size: 120%;
 }
 
-.console >
-.view-content >
-table > tbody > tr > td > :nth-child(1) {
+.console > .view-content > table > tbody > tr > td > :nth-child(1),
+.console > .view-content > .views-row
+{
     font-weight: bold;
     background-color: #edf0de;
     padding: 5px;
