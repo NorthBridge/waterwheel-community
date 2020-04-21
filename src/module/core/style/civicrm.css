@@ -1,7 +1,50 @@
-@import url("https://fonts.googleapis.com/css?family=Oxygen:400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Oxygen:400,300,700|Oswald:400,300");
+@import "member-levels.css";
 
 body, #site-slogan, .ui-widget, .comment-form label {
     font-family: "Oxygen", Arial, sans-serif !important;
+}
+
+#site-name a {
+    font-family: Oswald !important;
+}
+
+#page {
+    border-top-style: solid;
+    border-top-width: 20px;
+    border-top-color: #333333;
+}
+
+#header {
+    background-color: #edf0de !important;
+    background-image: -moz-linear-gradient(top,#f7f8ef 80%,#ffffff 80%) !important;
+    background-image: -ms-linear-gradient(top,#f7f8ef 80%,#ffffff 80%) !important;
+    background-image: -o-linear-gradient(top,#f7f8ef 80%,#ffffff 80%) !important;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(.8,#f7f8ef),color-stop(.8,#ffffff)) !important;
+    background-image: -webkit-linear-gradient(top,#f7f8ef 80%,#ffffff 80%) !important;
+    background-image: linear-gradient(top,#f7f8ef 80%,#ffffff 80%) !important;
+}
+
+#main-menu-links {
+    float: right !important;
+}
+
+#main-menu-links a {
+    border-top-left-radius: 2px !important;
+    border-top-right-radius: 2px !important;
+    border-right-style: solid !important;
+    border-right-width: 2px !important;
+    border-right-color: #486c7a !important;
+    font-weight: bold;
+    color: #666666 !important;
+}
+
+#main-menu-links li {
+    background-color: #899d7a !important;
+}
+
+.pcp-intro-text .pcp-intro-text-toggle-off {
+    display: none;
 }
 
 .float-right { float:right; margin-top: -20px;}
@@ -12,13 +55,31 @@ body, #site-slogan, .ui-widget, .comment-form label {
 
 .crm-container .header-dark { background-color: #486c7a; opacity: .9; border-radius: 4px; }
 
-.crm-container .crm-button { background: #d27b4b; border-radius: 6px; border: 0px; font-size: 18px; }
+.crm-container .crm-button,
+a.crm-register-button { 
+    background: #d27b4b !important; 
+    border-radius: 6px !important; 
+    border: 0px !important; 
+    font-size: 18px !important; 
+}
 
-.crm-container span.crm-button { padding:8px; float: right !important;}
+.crm-container span.crm-button, 
+a.crm-register-button { 
+    padding: 8px !important; 
+    float: right !important;
+}
 
 .crm-container input.crm-form-submit { font-size: 18px; }
 
 .crm-i-button > .crm-i { top: .8em; }
+
+.event-info > .crm-actionlinks-top {
+    display: none;
+}
+
+.crm-socialnetwork {
+    padding: 10px !important;
+}
 
 #crm-container.crm-public #crm-submit-buttons { margin-top: 20px; margin-bottom: 30px; }
 
@@ -40,7 +101,51 @@ table > tbody > tr > :nth-child(2) {
 	display:none;
 }
 
-.module { margin-left:40px; }
+.page-civicrm-contribute-transact #page-title,
+.page-node-11 #page-title,
+.page-civicrm-event #page-title,
+h1#page-title {
+    color: #486c7a !important;
+    font-weight: bold !important;
+}
+
+.page-civicrm-contribute-transact .crm-container {
+    line-height: 160% !important;
+}
+
+#crm-container.crm-public input[type="text"], 
+#crm-container.crm-public input[type="password"], 
+#crm-container.crm-public input[type="email"], 
+#crm-container.crm-public select {
+    width: 72%;
+}
+
+.sidebar .block {
+    border-radius: 14px !important;
+    border-top-left-radius: 2px !important;
+    border-top-style: solid !important;
+    border-top-width: 10px !important;
+    border-top-left-radius: 2px !important;
+    box-shadow: 2px 2px #cccccc !important;
+}
+
+.training, .planning { 
+    border-top: thin dotted;
+    border-color: #004d62;
+    padding-top: 10px;
+}
+
+.training .view-header, .view-content { margin-left:40px; }
+
+.planning .view-header, .view-content { margin-left:40px; }
+
+#privatemsg-list-form { margin-left:40px; }
+
+/* Hide all options for retaking the action plan quiz except for "Keep all answers" */
+form#quiz-result-form[action="/apps/members/node/48/take"] #edit-build-on-last div:nth-child(-n+2),
+form#quiz-result-form[action="/apps/members/node/48/take"] .description {
+    display:none;   
+}
 
 .console {     
     border: 1px solid #004d62;
@@ -51,6 +156,11 @@ table > tbody > tr > :nth-child(2) {
     margin-bottom: 10px;
     margin-left: 20px;
     margin-right: 20px; 
+    width: 500px;
+}
+
+.console > .view-content {
+    margin-left: 0px;
 }
 
 .console >
@@ -69,4 +179,202 @@ table > tbody > tr {
     padding: 5px;
     margin-bottom: 10px;
     border-radius: 10px;
+}
+
+table.prereq_info {
+    margin: 0px 0px;
+}
+
+table.prereq_info tbody tr {
+    background: #f7f8ef;
+}
+
+table.views-table tr th,
+table.privatemsg-list tr th {
+    background-color: #486c7a;
+}
+
+div.view-trial-meeting-design-message-thread > div.view-content > table > tbody > tr > td {
+    background-color: #ffffff;
+}
+
+div.view-progress-update-message-thread-2 > div.view-content > table > tbody > tr > td {
+    background-color: #edf0de;
+}
+
+.table.privatemsg-list {
+    
+}
+
+table.views-table {
+    margin-top: 0px;
+}
+
+tr.odd.views-row-first.views-row-last,
+table.privatemsg-list tr{
+    background-color: #ffffff;
+}
+
+table.privatemsg-list .form-type-checkbox {
+    display: none;
+}
+
+table.privatemsg-list > thead > tr > th.select-all > input,
+table.privatemsg-list > thead > tr > th.privatemsg-header-subject > a {
+    display: none;
+} 
+    
+#privatemsg-list-form > .container-inline > .form-type-select {
+    display: none;
+}
+
+td.views-field-nothing, td.views-field-nothing-1,
+table.privatemsg-list > tbody > tr > :nth-child(1) { 
+    background-image: url("https://northbridgetech.org/images/members-unchecked_20.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10%;
+}
+
+td.views-empty {
+    background-color: #ffffff;
+    background-image: url(https://northbridgetech.org/images/members-unchecked_20.png);
+    background-repeat: no-repeat;
+    background-position: 20px 10px;
+    padding-top: 12px;
+}
+
+td.completion_100 { 
+    background-image: url("https://northbridgetech.org/images/members-checked_24.png") !important;
+}
+
+span.incomplete-no-results {
+    margin-left:66px;
+    margin-right:68px;
+    margin-top:10px;
+}
+
+td.views-field-is-new-1 {
+    background-color: #ffffff;
+    color: #ffffff;
+    background-image: url(https://northbridgetech.org/images/messages-unread_24.png);
+    background-repeat: no-repeat;
+    background-position: 16px 10px;
+    padding-top: 12px;
+    width: 40px;
+}
+
+td.messages_unread_0 {
+    background-image: url(https://northbridgetech.org/images/messages-read_24.png) !important;
+}
+
+td.views-field a {
+    text-decoration: none;
+}
+
+.free_text_completion_100 + span {
+    display:none;
+}
+
+.free_text_display_marker + span.free_text_completion_5 {
+    display:none;
+}
+
+.start_button, 
+td.privatemsg-list-subject > a,
+td.views-field-subject > a {
+    width: 100px;
+    border-width: 1px;
+    border-style: outset;
+    border-color: white;
+    border-radius: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    opacity: .7;
+    font-weight: bold;
+    text-decoration: none;
+    color:#ffffff;
+    background-color: #f68620;
+}
+
+.start_button:hover {
+    opacity: 1;
+}
+
+.start_button_100 {
+    color: #4a4a4a !important;
+    background-color: #eeeeee !important;
+}
+
+.console_link_button {
+    float: right;
+    margin-top: -20px;
+    text-decoration: none !important;
+}
+
+.go_training_400,
+.go_status_0,
+.go_progress_0 {
+    color: #4a4a4a !important;
+    background-color: #eeeeee !important;
+}
+
+.go_progress_0 {
+    /*background-color: #004d62 !important;*/
+}
+
+td.messages_unread_0 + td + td > a {
+    background-color: #004d62 !important;
+}
+
+p.course_title {
+    font-weight: bold;
+    font-style: italic;
+    color: #004d62;
+}
+
+#quiz_score_percent ~ fieldset {
+    display:none;
+}
+
+.show-this-one {
+    display: block !important;
+}
+
+.hide-this-one {
+    display: none !important;
+}
+
+.entity-quiz-result-answer > .content > .sticky-table > tbody > tr > :nth-child(2),
+.entity-quiz-result-answer > .content > .sticky-table > thead > tr > :nth-child(2) {
+    display: none;
+}
+
+.tabs ul.primary > li:first-child {
+    display:none;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.feature_image {
+    border-style: outset;
+    border-width: 1px;
+    border-color: #004d62;
+    margin-left: 15px;
+    
+    border-radius: 14px !important;
+    border-top-left-radius: 2px !important;
+    border-top-style: solid !important;
+    border-top-width: 10px !important;
+    border-top-left-radius: 2px !important;
+    box-shadow: 2px 2px #cccccc !important;
+}
+
+.only-print {
+    display: none;
 }
